@@ -16,13 +16,16 @@ html {
  background: rgb(15 23 42);
 }
 
+#privacy-policy{
+  background: rgb(15 23 42);
+}
 
 /* index.css */
 .active-link {
   text-decoration: underline;
   text-decoration-color: #fff; /* 下划线颜色 */
   text-decoration-thickness: 2px; /* 下划线粗细 */
-  text-underline-offset: 0.25rem; /* 下划线与文字的距离 */
+  text-underline-offset: 0.35rem; /* 下划线与文字的距离 */
 }
 
 /* 默认居中对齐，适用于小屏幕 */
@@ -32,11 +35,15 @@ html {
 }
 
 /* 大屏幕下，根据奇偶数调整对齐 */
-@media (min-width: 768px) { /* 对应于Tailwind CSS的md断点 */
+@media (min-width: 1024px) { /* 对应于Tailwind CSS的md断点 */
   .app-card-container:nth-child(odd) {
     justify-content: flex-end;
   }
   .app-card-container:nth-child(even) {
     justify-content: flex-start;
   }
+}
+
+.markdown-body {
+  background-color: #1E293B; /* bg-slate-900 对应的颜色 */
 }

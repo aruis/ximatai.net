@@ -38,7 +38,7 @@ const AppCard = ({id, logo, title, subtitle, summary}) => {
                 )}
                 <button
                     className="self-end flex items-center justify-center bg-transparent hover:bg-slate-500 text-slate-300 hover:text-white p-2 rounded-full h-10 w-10"
-                    onClick={() => navigate(`/app/${id}`)}
+                    onClick={() => navigate(`/apps/${id}`)}
                 >
                     <MdMoreHoriz size="1.5em"/>
                 </button>
