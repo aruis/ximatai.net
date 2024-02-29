@@ -9,7 +9,7 @@ const Navbar = () => {
                     {/* Logo and Title */}
                     <NavLink to="/" className="flex items-center py-5 px-2">
                         {/* Update the src attribute to your logo's correct path */}
-                        <img src="/logo.png" alt="Logo" className="h-10 w-10 rounded-full mr-2 border-2 border-white bg-zinc-300" />
+                        <img src="/logo.jpg" alt="Logo" className="h-10 w-10 rounded-full mr-2 border-2 border-white bg-zinc-300" />
                         {/* Main Title with Subtitle */}
                         <div>
                             <span className="font-bold text-gray-200 hover:text-gray-300 text-xl">戏码台</span>
