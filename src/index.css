@@ -4,46 +4,52 @@
 
 /* 你可以在这里添加自定义样式 */
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* 示例：自定义链接样式 */
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 html {
- background: rgb(15 23 42);
+    background: rgb(15 23 42);
 }
 
-#privacy-policy{
-  background: rgb(15 23 42);
+#privacy-policy {
+    background: rgb(15 23 42);
 }
 
 /* index.css */
 .active-link {
-  text-decoration: underline;
-  text-decoration-color: #fff; /* 下划线颜色 */
-  text-decoration-thickness: 2px; /* 下划线粗细 */
-  text-underline-offset: 0.35rem; /* 下划线与文字的距离 */
+    text-decoration: underline;
+    text-decoration-color: #fff; /* 下划线颜色 */
+    text-decoration-thickness: 1px; /* 下划线粗细 */
+    text-underline-offset: 0.35rem; /* 下划线与文字的距离 */
 }
 
 /* 默认居中对齐，适用于小屏幕 */
 .app-card-container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* 大屏幕下，根据奇偶数调整对齐 */
-@media (min-width: 1024px) { /* 对应于Tailwind CSS的md断点 */
-  .app-card-container:nth-child(odd) {
-    justify-content: flex-end;
-  }
-  .app-card-container:nth-child(even) {
-    justify-content: flex-start;
-  }
+@media (min-width: 1024px) {
+    /* 对应于Tailwind CSS的md断点 */
+    .app-card-container:nth-child(odd) {
+        justify-content: flex-end;
+    }
+
+    .app-card-container:nth-child(even) {
+        justify-content: flex-start;
+    }
 }
 
 .markdown-body {
-  background-color: #1E293B; /* bg-slate-900 对应的颜色 */
+    background-color: #1E293B; /* bg-slate-900 对应的颜色 */
+}
+
+.nav-link {
+    font-family: 'Monaco', 'Courier New', Courier, 'Lucida Console', monospace;
 }

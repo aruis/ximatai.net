@@ -14,13 +14,13 @@ const Home = () => {
                 {/* 右边部分：个人信息 */}
                 <div className="text-gray-200">
                     <div className="flex items-end mb-3">
-                        <h2 className="text-4xl font-bold text-white">牧云踏歌</h2>
+                        <h2 className="text-4xl font-bold text-slate-50">牧云踏歌</h2>
                         <span className="text-md text-gray-400 ml-3">什么都想学的老刘</span>
                     </div>
 
-                    <p className="text-lg mb-3">看一辈子书，写一辈子代码，除此以外，再无他求。</p>
-                    <p className="mb-3">编程 / 看书 / 摄影</p>
-                    <p className="mb-3">中国矿业大学（2006-2010）</p>
+                    <p className="text-lg mb-3">看一辈子书，写一辈子代码。</p>
+                    <p className="mb-3">编程 / 看书 / 摄影 / 游戏</p>
+                    <p className="mb-3">中国矿业大学・计算机科学与技术（2006-2010）</p>
                     <div className="flex items-center space-x-4">
                         <a href="https://github.com/aruis" className="hover:text-blue-400">
                             <FaGithub size="20"/>
