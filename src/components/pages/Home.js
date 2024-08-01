@@ -25,7 +25,7 @@ const Home = () => {
                         <a href="https://github.com/aruis" className="hover:text-blue-400">
                             <FaGithub size="20"/>
                         </a>
-                        <a href="mailto:eastern.howls0a@icloud.com" className="hover:text-blue-400">
+                        <a href="mailto:dev@ximatai.net" className="hover:text-blue-400">
                             <FaEnvelope size="20"/>
                         </a>
                         <a href="https://space.bilibili.com/24370353" className="hover:text-blue-400">
