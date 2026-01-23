@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import {FiExternalLink} from "react-icons/fi";
 
 const navLinkBaseClass = 'py-5 px-3 hover:bg-gray-700 rounded transition duration-300 nav-link';
 
@@ -28,6 +29,14 @@ const Navbar = () => {
                                  className={({isActive}) => `${navLinkBaseClass} ${isActive ? 'active-link' : ''}`}>Apps</NavLink>
                         <NavLink to="/booklist"
                                  className={({isActive}) => `${navLinkBaseClass} ${isActive ? 'active-link' : ''}`}>BookList</NavLink>
+                        <a
+                            href="https://blog.ximatai.net"
+                            className={`${navLinkBaseClass} inline-flex items-center gap-1 whitespace-nowrap`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Blog <FiExternalLink />
+                        </a>
                     </div>
                 </div>
             </div>
