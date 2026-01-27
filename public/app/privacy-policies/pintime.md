@@ -35,3 +35,34 @@ The app does not contain any analytics tools or advertising platforms.
 If you have any questions, please contact:
 
 * **Email**: [eastern.howls0a@icloud.com](mailto:eastern.howls0a@icloud.com)
+
+---
+
+## 使用条款 / Terms of Use
+
+### 1. 服务协议 / Acceptance of Terms
+
+通过下载或使用 PinTime，即表示您同意接受本条款的约束。如果您不同意这些条款，请勿使用本应用。
+By downloading or using PinTime, you agree to be bound by these terms. If you do not agree, please do not use the application.
+
+### 2. 内购与订阅 / In-App Purchases
+
+* **专业版 (Pro Version)**：PinTime 提供一次性付费解锁的专业版功能。
+* **支付与退款 (Payments & Refunds)**：所有费用通过苹果 App Store 支付。退款请求必须直接向苹果公司提出，开发者无权直接处理退款。
+* **Pro Version**: PinTime offers Pro features via a one-time purchase.
+* **Payments & Refunds**: All payments are processed via the Apple App Store. Refund requests must be submitted to Apple; the developer cannot process refunds directly.
+
+### 3. 数据责任 / Data Responsibility
+
+虽然我们通过 iCloud 提供数据同步功能，但用户应自行承担数据丢失的风险。建议定期确保 iCloud 备份已开启。对于因不可抗力或系统故障导致的任何数据损失，开发者不承担赔偿责任。
+While we provide data syncing via iCloud, users assume the risk of data loss. It is recommended to ensure iCloud backup is active. The developer is not liable for any data loss due to system failures.
+
+### 4. 知识产权 / Intellectual Property
+
+PinTime 的设计、图标、代码及所有原创内容均受版权法保护。未经许可，不得擅自克隆、反向工程或商业化利用。
+All designs, icons, code, and original content of PinTime are protected by copyright. Unauthorized cloning, reverse engineering, or commercial use is prohibited.
+
+### 5. 条款变更 / Changes to Terms
+
+开发者保留随时更新本条款的权利。建议您定期查看本页面以获悉最新变更。
+The developer reserves the right to update these terms at any time. You are encouraged to check this page periodically for any changes.
