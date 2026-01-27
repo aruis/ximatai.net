@@ -4,6 +4,7 @@ import appsInfo from "../../data/appsInfo";
 import {marked} from 'marked';
 import DOMPurify from 'dompurify';
 import 'github-markdown-css/github-markdown.css';
+import '../../markdown-dark.css';
 
 const AppDetails = () => {
     const { appId } = useParams();

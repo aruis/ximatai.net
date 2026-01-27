@@ -43,8 +43,25 @@ const appsInfo = {
         privacy:
             "TimeBank 隐私政策...",
         qa: [],
+    },
+    "pintime":{
+        id: "pintime",
+        logo: "/app/pintime.jpg",
+        title: "PinTime",
+        subtitle: "标记您的重要时刻",
+        summary:
+            "流水般的日子里，总有一些瞬间值得被定格，总有一些坚持值得被标记。\n" +
+            "PinTime 是一款极简而不失温度的习惯追踪工具，帮您在时光的流转中，标记出那些真正改变生活的「重要时刻」。\n",
+        storeUrl:
+            "https://apps.apple.com/cn/app/pintime-标记您的重要时刻/id6474505609",
+        platform:[
+            "iOS","iPadOS"
+        ],
+        privacy:
+            "PinTime 隐私政策...",
+        qa: [],
     }
-// 可以根据需要添加更多应用
+
 };
 
 

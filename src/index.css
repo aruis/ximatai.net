@@ -46,10 +46,6 @@ html {
     }
 }
 
-.markdown-body {
-    background-color: #1E293B; /* bg-slate-900 对应的颜色 */
-}
-
 .nav-link {
     font-family: 'Monaco', 'Courier New', Courier, 'Lucida Console', monospace;
 }

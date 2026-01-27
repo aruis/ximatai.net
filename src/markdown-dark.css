@@ -1,0 +1,8 @@
+/* markdown-dark.css */
+.markdown-body {
+    --bgColor-default: #0d1117;
+    --fgColor-default: #c9d1d9;
+    --fgColor-muted: #8b949e;
+    --fgColor-accent: #58a6ff;
+    --borderColor-default: #30363d;
+}
