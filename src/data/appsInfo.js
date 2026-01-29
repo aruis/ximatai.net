@@ -55,7 +55,7 @@ const appsInfo = {
         storeUrl:
             "https://apps.apple.com/cn/app/pintime-标记您的重要时刻/id6474505609",
         platform:[
-            "iOS","iPadOS"
+            "iOS"
         ],
         privacy:
             "PinTime 隐私政策...",
