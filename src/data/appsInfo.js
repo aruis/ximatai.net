@@ -46,7 +46,7 @@ const appsInfo = {
     },
     "pintime":{
         id: "pintime",
-        logo: "/app/pintime.jpg",
+        logo: "/app/pintime.png",
         title: "PinTime",
         subtitle: "标记您的重要时刻",
         summary:
