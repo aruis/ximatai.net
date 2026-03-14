@@ -53,7 +53,7 @@ const appsInfo = {
             "流水般的日子里，总有一些瞬间值得被定格，总有一些坚持值得被标记。\n" +
             "PinTime 是一款极简而不失温度的习惯追踪工具，帮您在时光的流转中，标记出那些真正改变生活的「重要时刻」。\n",
         storeUrl:
-            "https://apps.apple.com/cn/app/pintime-标记您的重要时刻/id6474505609",
+            "https://apps.apple.com/us/app/pintime-%E6%A0%87%E8%AE%B0%E6%82%A8%E7%9A%84%E9%87%8D%E8%A6%81%E6%97%B6%E5%88%BB/id6757686170",
         platform:[
             "iOS"
         ],
