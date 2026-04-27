@@ -93,7 +93,6 @@ const appsInfo = {
         primaryLabel: "查看项目",
         secondaryUrl: "/apps/reelflow#privacy-policy",
         secondaryLabel: "隐私与条款",
-        availability: "即将登陆 Mac App Store",
         platform: [
             "macOS 14.6+"
         ],
