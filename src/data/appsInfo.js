@@ -79,7 +79,7 @@ const appsInfo = {
     },
     "reelflow": {
         id: "reelflow",
-        logo: "/app/reelflow-icon.png",
+        logo: "/app/reelflow-icon.jpg",
         screenshot: "/app/reelflow.jpg",
         title: "ReelFlow",
         subtitle: "原生 macOS 照片转视频工具",
@@ -87,9 +87,9 @@ const appsInfo = {
             "ReelFlow 是一款面向摄影师和内容创作者的原生 macOS 应用，用来把一组照片快速做成更完整、更有质感的幻灯片视频。\n" +
             "它强调预览快、导出稳、控制足够细，同时保持主流程清晰：导入照片、调整参数、预览结果、加入音乐、导出 MP4。\n" +
             "目前项目已经开源，官方版本也将继续面向 Mac App Store 分发。",
-        storeUrl: "",
+        storeUrl: "https://apps.apple.com/cn/app/reelflow/id6761539309",
         githubUrl: "https://github.com/aruis/ReelFlow",
-        primaryUrl: "https://github.com/aruis/ReelFlow",
+        primaryUrl: "https://apps.apple.com/cn/app/reelflow/id6761539309",
         primaryLabel: "查看项目",
         secondaryUrl: "/apps/reelflow#privacy-policy",
         secondaryLabel: "隐私与条款",
