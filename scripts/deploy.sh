@@ -9,6 +9,6 @@ echo "🚀 Deploying to server..."
 
 rsync -avz --delete \
   build/ \
-  blog@ximatai.net:/var/www/ximatai.net/
+  ali:/var/www/ximatai.net/
 
 echo "✅ Deploy done."

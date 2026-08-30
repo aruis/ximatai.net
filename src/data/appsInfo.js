@@ -102,6 +102,23 @@ const appsInfo = {
             "ReelFlow 当前以 macOS 为核心平台，聚焦照片到视频的高质量导出工作流。",
             "如果你想先了解产品和开发进展，可以直接查看 GitHub 开源仓库。"
         ],
+    },
+    "baton": {
+        id: "baton",
+        logo: "/app/baton.jpg",
+        title: "Baton Agent",
+        subtitle: "把网页 Agent 对话接力到 iPhone",
+        summary:
+            "Baton 是已有 Web Agent 系统的 iPhone Companion。\n" +
+            "扫描网页上的配对二维码，即可加入同一段对话，在手机上通过本地语音转文字或键盘继续交流。",
+        storeUrl:
+            "https://apps.apple.com/app/id6806605185",
+        platform: [
+            "iOS"
+        ],
+        privacy:
+            "Baton 支持与隐私政策...",
+        qa: [],
     }
 
 };
