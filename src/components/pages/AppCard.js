@@ -1,53 +1,38 @@
-import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom'; // React Router v6
-import {MdMoreHoriz} from 'react-icons/md';
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {MdArrowForward} from 'react-icons/md';
 
-const AppCard = ({id, logo, title, subtitle, summary, availability}) => {
-    const navigate = useNavigate();
-    const [isHovered, setIsHovered] = useState(false); // 新增状态来追踪鼠标悬浮状态
-
-    const summaryLines = summary.split('\n');
-
-    return (
-        <div
-            className="flex rounded-lg shadow-lg overflow-hidden my-4
-               bg-gradient-to-r from-slate-800 to-slate-700
-               hover:scale-105  hover:shadow-2xl
-               transition-all duration-500 min-w-128"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            <div className="w-48 flex-shrink-0">
-                <img src={logo} alt={`${title} Logo`} className="w-full h-full object-cover"/>
-            </div>
-            <div className="flex-1 p-4 flex flex-col justify-between">
-                {/* 使用isHovered状态来切换显示标题/副标题或summary */}
-                {!isHovered ? (
-                    <div className="mt-1">
-                        <h2 className="text-2xl font-bold text-white">{title}</h2>
-                        <p className="text-slate-300 text-base mt-2">{subtitle}</p>
-                        {availability && (
-                            <p className="text-sky-300 text-xs mt-3">{availability}</p>
-                        )}
-                    </div>
-                ) : (
-                    <div className="text-slate-300 text-sm mt-2">
-                        {summaryLines.map((line, index) => (
-                            <React.Fragment key={index}>
-                                {line}{index < summaryLines.length - 1 && <br/>}
-                            </React.Fragment>
-                        ))}
-                    </div>
-                )}
-                <button
-                    className="self-end flex items-center justify-center bg-transparent hover:bg-slate-500 text-slate-300 hover:text-white p-2 rounded-full h-10 w-10"
-                    onClick={() => navigate(`/apps/${id}`)}
-                >
-                    <MdMoreHoriz size="1.5em"/>
-                </button>
+const AppCard = ({id, logo, title, subtitle, summary}) => (
+    <Link
+        to={`/apps/${id}`}
+        aria-label={`了解 ${title}`}
+        className="flex h-full min-w-0 gap-4 rounded-2xl border border-slate-700
+                   bg-gradient-to-br from-slate-800 to-slate-800/70 p-5 shadow-lg
+                   transition-colors duration-150 hover:border-slate-400
+                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400
+                   focus-visible:ring-offset-4 focus-visible:ring-offset-slate-900
+                   motion-reduce:transition-none sm:gap-5 sm:p-6"
+    >
+        <img
+            src={logo}
+            alt=""
+            width="112"
+            height="112"
+            className="h-20 w-20 shrink-0 rounded-2xl object-cover sm:h-28 sm:w-28"
+        />
+        <div className="flex min-w-0 flex-1 flex-col">
+            <h2 className="text-xl font-bold text-white sm:text-2xl">{title}</h2>
+            <p className="mt-2 text-base text-slate-300">{subtitle}</p>
+            <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-400">
+                {summary.replace(/\s+/g, ' ').trim()}
+            </p>
+            <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5 text-sm">
+                <span className="ml-auto inline-flex items-center gap-2 font-medium text-slate-200">
+                    了解更多 <MdArrowForward aria-hidden="true" />
+                </span>
             </div>
         </div>
-    );
-};
+    </Link>
+);
 
 export default AppCard;
