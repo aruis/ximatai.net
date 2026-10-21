@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# ximatai
+
+`master` 更新后由 GitHub Actions 自动构建并部署至 ali。配置、校验与恢复说明见 [部署文档](docs/DEPLOYMENT.md)。
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

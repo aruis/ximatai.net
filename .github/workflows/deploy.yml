@@ -1,0 +1,65 @@
+name: Deploy ximatai
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ximatai-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment:
+      name: production
+      url: https://ximatai.net
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build site
+        run: |
+          npm run build
+          node -e 'require("fs").writeFileSync("build/deployment.json", JSON.stringify({commit: process.env.GITHUB_SHA}) + "\n")'
+      - name: Configure deployment SSH
+        env:
+          DEPLOY_KEY: ${{ secrets.XIMATAI_DEPLOY_KEY }}
+          KNOWN_HOSTS: ${{ secrets.XIMATAI_KNOWN_HOSTS }}
+        run: |
+          test -n "$DEPLOY_KEY"
+          test -n "$KNOWN_HOSTS"
+          install -d -m 700 "$RUNNER_TEMP/ximatai-ssh"
+          printf '%s\n' "$DEPLOY_KEY" > "$RUNNER_TEMP/ximatai-ssh/id_ed25519"
+          printf '%s\n' "$KNOWN_HOSTS" > "$RUNNER_TEMP/ximatai-ssh/known_hosts"
+          chmod 600 "$RUNNER_TEMP/ximatai-ssh/"*
+      - name: Deploy to ali
+        env:
+          DEPLOY_HOST: ${{ vars.XIMATAI_DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ vars.XIMATAI_DEPLOY_PORT }}
+          DEPLOY_USER: ${{ vars.XIMATAI_DEPLOY_USER }}
+        run: |
+          test -n "$DEPLOY_HOST"
+          test -n "$DEPLOY_PORT"
+          test -n "$DEPLOY_USER"
+          export RSYNC_RSH="ssh -i $RUNNER_TEMP/ximatai-ssh/id_ed25519 -p $DEPLOY_PORT -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$RUNNER_TEMP/ximatai-ssh/known_hosts -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=3"
+          rsync -rlptz --chmod=D755,F644 --delay-updates --delete-delay \
+            --exclude='.DS_Store' --timeout=120 \
+            build/ "$DEPLOY_USER@$DEPLOY_HOST:./"
+      - name: Verify public deployment
+        run: python3 scripts/verify-deployment.py "$GITHUB_SHA"
+      - name: Remove deployment credentials
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/ximatai-ssh"

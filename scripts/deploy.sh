@@ -7,7 +7,7 @@ npm run build
 
 echo "🚀 Deploying to server..."
 
-rsync -avz --delete \
+rsync -avz --no-owner --no-group --delete --exclude='.DS_Store' \
   build/ \
   ali:/var/www/ximatai.net/
 
