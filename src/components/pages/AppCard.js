@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom'; // React Router v6
 import {MdMoreHoriz} from 'react-icons/md';
 
-const AppCard = ({id, logo, title, subtitle, summary}) => {
+const AppCard = ({id, logo, title, subtitle, summary, availability}) => {
     const navigate = useNavigate();
     const [isHovered, setIsHovered] = useState(false); // 新增状态来追踪鼠标悬浮状态
 
@@ -26,6 +26,9 @@ const AppCard = ({id, logo, title, subtitle, summary}) => {
                     <div className="mt-1">
                         <h2 className="text-2xl font-bold text-white">{title}</h2>
                         <p className="text-slate-300 text-base mt-2">{subtitle}</p>
+                        {availability && (
+                            <p className="text-sky-300 text-xs mt-3">{availability}</p>
+                        )}
                     </div>
                 ) : (
                     <div className="text-slate-300 text-sm mt-2">

@@ -108,7 +108,25 @@ const AppDetails = () => {
                             </div>
                         )}
 
-                        {/* 隐私政策链接 */}
+                        {appDetails.screenshots && (
+                            <section aria-label={`${appDetails.title} 界面预览`} className="w-full max-w-4xl mb-16">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                    {appDetails.screenshots.map(({src, caption}) => (
+                                        <figure key={src} className="w-full max-w-sm mx-auto">
+                                            <img src={src} alt={`${appDetails.title} ${caption}`} loading="lazy"
+                                                 width="780" height="1320"
+                                                 className="w-full rounded-3xl border border-slate-700 shadow-2xl" />
+                                            <figcaption className="mt-4 text-center text-sm text-slate-300">{caption}</figcaption>
+                                        </figure>
+                                    ))}
+                                </div>
+                                {appDetails.screenshotNote && (
+                                    <p className="mt-6 text-center text-sm text-slate-400">{appDetails.screenshotNote}</p>
+                                )}
+                            </section>
+                        )}
+
+                        {/* 使用与隐私说明 */}
                         <div id="privacy-policy" className=" markdown-body max-w-5xl"
                              // style={{ backgroundColor: null }}
                              dangerouslySetInnerHTML={{__html: privacyPolicy}}/>
@@ -130,7 +148,7 @@ const AppDetails = () => {
                 <p className="text-center text-xl">App详情未找到。</p>
             )}
 
-            <div className="flex justify-center items-center space-x-4 mb-12"> {/* 间距调整 */}
+            <div className="flex flex-wrap justify-center items-center gap-4 mb-12">
                 {Object.entries(appsInfo).map(([id, app]) => (
                     <Link
                         key={id}

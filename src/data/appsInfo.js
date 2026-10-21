@@ -103,6 +103,33 @@ const appsInfo = {
             "如果你想先了解产品和开发进展，可以直接查看 GitHub 开源仓库。"
         ],
     },
+    "codexwatcher": {
+        id: "codexwatcher",
+        logo: "/app/codexwatcher.png",
+        title: "Codex Watcher",
+        subtitle: "掌握 Codex 额度，安排使用节奏",
+        summary:
+            "Codex Watcher 是一款原生 macOS 菜单栏工具，让你随时查看 Codex 已用额度、时间进度与下次重置时间。\n" +
+            "通过对比实际用量与自然时间进度，了解额度消耗是否超前；还可查看重置卡数量与有效期，自定义菜单栏显示。\n" +
+            "项目以 MIT 许可证在 GitHub 开源，提供源码自行构建运行。",
+        githubUrl: "https://github.com/ximatai/CodexWatcher",
+        primaryUrl: "https://github.com/ximatai/CodexWatcher",
+        primaryLabel: "在 GitHub 查看源码",
+        secondaryUrl: "#privacy-policy",
+        secondaryLabel: "使用与隐私说明",
+        availability: "GitHub 开源 · 源码预览版",
+        platform: ["macOS 14+"],
+        screenshots: [
+            { src: "/app/codexwatcher-light.png", caption: "亮色用量面板" },
+            { src: "/app/codexwatcher-dark.png", caption: "暗色用量面板" }
+        ],
+        screenshotNote: "界面使用虚构演示数据，非真实账号用量。",
+        qa: [
+            "如何运行？需要 macOS 14+、Xcode 和单独安装的 Codex CLI，按 GitHub 仓库说明从源码构建。",
+            "偏移是什么意思？实际用量减去自然时间进度，例如已用 35%、时间已过 28%，偏移为 +7 个百分点，表示消耗超前。",
+            "多久更新一次？每 5 分钟读取用量，打开面板、系统唤醒及账号变化也会触发刷新。"
+        ],
+    },
     "baton": {
         id: "baton",
         logo: "/app/baton.jpg",
